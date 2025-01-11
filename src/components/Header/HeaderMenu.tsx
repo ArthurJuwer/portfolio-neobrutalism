@@ -30,10 +30,8 @@ const HeaderMenu: FunctionComponent<menuSituation> = ({menuSituation}) => {
         
     }
 
-    const menuSituationVar:boolean = (menuSituation)
-
     return (
-    <nav className={`${menuSituationVar ? "flex" : "hidden"} xl:flex  xl:h-12  px-6 bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
+    <nav className={`${menuSituation ? "flex" : "hidden"} absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-auto bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
         <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-12  font-semibold">
             {listItemsMenu.map(({name, id, isSelected})=>(
                 <li 

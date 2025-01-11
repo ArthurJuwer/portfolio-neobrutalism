@@ -1,4 +1,4 @@
-import { MenuIcon } from "lucide-react"
+import { MenuIcon, X } from "lucide-react"
 import { FunctionComponent, useState } from "react"
 
 interface HeaderIconProps {
@@ -10,8 +10,8 @@ const HeaderIcon: FunctionComponent<HeaderIconProps> = ({menuSituation, get}) =>
 
     const [menuIsOpen,setMenuIsOpen] = useState<boolean>(menuSituation)
 
-    const openMenu = () => {
-        menuIsOpen === true ? setMenuIsOpen(false) : setMenuIsOpen(true);    
+    const openMenu = () => {    
+        menuIsOpen ? setMenuIsOpen(false) : setMenuIsOpen(true);    
         get(menuIsOpen)
     }
 
@@ -20,7 +20,8 @@ const HeaderIcon: FunctionComponent<HeaderIconProps> = ({menuSituation, get}) =>
             className="size-12 bg-mainGreen flex items-center justify-center border-neoBrutalism shadow-neoBrutalism rounded-md"
             onClick={openMenu}
         >
-            <MenuIcon />
+            
+            {menuSituation ? <X /> : <MenuIcon /> }
         </button>
     )
 }
