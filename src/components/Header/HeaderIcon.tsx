@@ -8,7 +8,7 @@ interface HeaderIconProps {
 
 const HeaderIcon: FunctionComponent<HeaderIconProps> = ({menuSituation, get}) => {
 
-    const [menuIsOpen,setMenuIsOpen] = useState<boolean>(menuSituation)
+    const [menuIsOpen, setMenuIsOpen] = useState<boolean>(menuSituation)
 
     const openMenu = () => {    
         menuIsOpen ? setMenuIsOpen(false) : setMenuIsOpen(true);    

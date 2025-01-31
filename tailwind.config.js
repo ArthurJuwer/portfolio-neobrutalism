@@ -10,6 +10,8 @@ export default {
         mainGreen: "#A3E636",
         secondGreen: "#7FBC8C",
         thirdGreen: "#97BD9F",
+        fourGreen: "#DEFFA8",
+        fiveGreen: "#EBFFC9",
 
         titleGray: "#282826",
         textGray: "#7B7B7B",
@@ -26,9 +28,6 @@ export default {
       },
       boxShadow: {
         neoBrutalism: "3px 3px 0px #000" /* Sombra sólida e marcante */
-
-
-        
       }
     },
   },
