@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const ContentAboutAndHabilities = () => {
     const [atualIndexSlide, setAtualIndexSlide] = useState<number>(1)
-    
+    // VER O URL e definir o index apartir disso
 
   return (
     <div className="flex flex-col gap-y-5 my-12">
@@ -22,7 +22,7 @@ const ContentAboutAndHabilities = () => {
             </button>
         </div>
         <div className="w-full h-[28rem] flex flex-col lg:flex-row gap-12 items-start justify-between bg-mainGreen p-6 border-neoBrutalism shadow-neoBrutalism rounded-xl">
-            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-4 lg:pb-24`}>
+            <div id="sobre" className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-4 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Sobre Mim</h1>
                 <p className="text-justify">
                     Sou um estudante de Tecnologia da Informação no Senac, apaixonado por desenvolvimento de software e novas tecnologias. Sempre em busca de aprimorar minhas habilidades e aprender mais sobre desenvolvimento front-end, back-end e inovação tecnológica.
@@ -79,7 +79,7 @@ const ContentAboutAndHabilities = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${atualIndexSlide === 2 ? "flex" : "hidden"} w-full flex-col gap-y-4 lg:pb-24`}>
+            <div id="habilidades" className={`${atualIndexSlide === 2 ? "flex" : "hidden"} w-full flex-col gap-y-4 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Habilidades</h1>
                 <div className="w-full h-80 p-6 bg-fourGreen rounded-xl flex justify-between gap-x-10">
                     <div className="w-1/2">
