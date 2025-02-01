@@ -27,7 +27,17 @@ export default {
         neoBrutalism: "#000"
       },
       boxShadow: {
-        neoBrutalism: "3px 3px 0px #000" /* Sombra sólida e marcante */
+        neoBrutalism: "3px 3px 0px #000", 
+        neoBrutalism_100: "4.5px 4.5px 0px #000", 
+        neoBrutalism_200: "6px 6px 0px #000",
+        neoBrutalism_300: "8px 8px 0px #000",
+        neoBrutalism_350: "8px 12px 0px #000",
+        neoBrutalism_400: "10px 10px 0px #000",
+        neoBrutalism_500: "12px 12px 0px #000",
+
+        neoBrutalism_right: "16px 16px 0px #000",
+
+        neoBrutalism_label: "0px 3px 0px #000, 3px 3px 0px #000 ",
       }
     },
   },

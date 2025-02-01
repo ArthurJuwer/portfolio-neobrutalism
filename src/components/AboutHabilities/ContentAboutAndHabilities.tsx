@@ -1,3 +1,4 @@
+import { Upload } from "lucide-react"
 import { useState } from "react"
 
 const ContentAboutAndHabilities = () => {
@@ -7,7 +8,7 @@ const ContentAboutAndHabilities = () => {
   return (
     <div className="flex flex-col gap-y-5 my-12">
         {/* SLIDE MENU */}
-        <div className="w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism shadow-neoBrutalism rounded-xl">
+        <div className="w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
             <button 
                 className={`${atualIndexSlide === 1 ? "border-black border-2" : ""} w-1/2 text-xl font-semibold  p-3 rounded-xl`}
                 onClick={() => setAtualIndexSlide(1)}
@@ -21,21 +22,28 @@ const ContentAboutAndHabilities = () => {
                 Habilidades
             </button>
         </div>
-        <div className="w-full h-[28rem] flex flex-col lg:flex-row gap-12 items-start justify-between bg-mainGreen p-6 border-neoBrutalism shadow-neoBrutalism rounded-xl">
-            <div id="sobre" className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-4 lg:pb-24`}>
+        <div className="w-full h-[28rem] flex flex-col lg:flex-row gap-12 items-start justify-between bg-mainGreen p-6 py-8 border-neoBrutalism shadow-neoBrutalism rounded-xl">
+            <div id="sobre" className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-8 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Sobre Mim</h1>
                 <p className="text-justify">
                     Sou um estudante de Tecnologia da Informação no Senac, apaixonado por desenvolvimento de software e novas tecnologias. Sempre em busca de aprimorar minhas habilidades e aprender mais sobre desenvolvimento front-end, back-end e inovação tecnológica.
                     <br /> <br />
                     Com projetos focados em aplicações web, sempre tento integrar as melhores práticas de design e desenvolvimento, buscando entregar soluções que combinam funcionalidade e estética.
                 </p>
-                <button className="border-neoBrutalism shadow-neoBrutalism bg-white p-2 rounded-lg w-full lg:w-5/12 font-semibold">Baixar Currículo</button>
+                <button 
+                    className="border-neoBrutalism shadow-neoBrutalism bg-white p-2 rounded-lg w-full lg:w-5/12 font-semibold flex items-center justify-center gap-x-2"
+                >
+                    Baixar Currículo <div className="size-7 border-black border rounded-full bg-mainGreen flex items-center justify-center"> <Upload className="size-4" /> </div>
+                </button>
             </div>
-            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden" } border-2 w-full lg:w-0 lg:h-64 border-black rounded-xl`}></div>
-            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-5`}>
+            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden" } items-center justify-center h-full `}>
+                <span className="border-2 w-full lg:w-0 lg:h-80 border-black rounded-xl"></span>
+            </div>
+            
+            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-8`}>
                 <h1 className="font-semibold text-2xl">Linha do Tempo</h1>
                 <div className="flex">
-                    <span className="hidden lg:block border-l-4 h-72 border-black"></span>
+                    <span className="hidden lg:flex border-l-4 h-72 border-black"></span>
                     <div className="flex flex-col justify-between">
                         <div className="flex items-center">
                             <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
