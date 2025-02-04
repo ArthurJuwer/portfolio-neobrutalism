@@ -16,9 +16,9 @@ const HeaderMenu: FunctionComponent<menuSituation> = ({menuSituation}) => {
         {name: "Sobre", id: "#sobre", isSelected: false },
         {name: "Habilidades", id: "#habilidades", isSelected: false },
         {name: "Projetos", id: "#projetos", isSelected: false },
+        {name: "Redes Sociais", id: "#redes", isSelected: false },
         {name: "Experiências", id: "#experiências", isSelected: false },
         {name: "Contato", id: "#contato", isSelected: false },
-        {name: "Rodapé", id: "#rodapé", isSelected: false },
     ])
 
     const handleSelect = (id: string) => {
@@ -34,17 +34,17 @@ const HeaderMenu: FunctionComponent<menuSituation> = ({menuSituation}) => {
     <nav className={`${menuSituation ? "flex" : "hidden"} absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-auto bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
         <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-12  font-semibold">
             {listItemsMenu.map(({name, id, isSelected})=>(
-                <li 
-                    className={`${isSelected ? "border-neoBrutalism" : ""} p-1 px-3 rounded-md`}
-                    key={id} 
-                    id={id}
-                    onClick={() => handleSelect(id)}
-                >
-                    <a 
-                        href={id}>
-                        {name}
-                    </a>
-                </li>
+                <a 
+                    href={id}>
+                    <li 
+                        className={`${isSelected ? "border-neoBrutalism" : ""} p-1 px-3 rounded-md`}
+                        key={id} 
+                        id={id}
+                        onClick={() => handleSelect(id)}
+                    >
+                        {name}   
+                    </li>
+                </a>
             ))}
         </ul>
     </nav>
