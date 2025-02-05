@@ -29,14 +29,14 @@ const Contact: React.FC = () => {
       return;
     }
 
-    setIsLoading(true);  // Set loading state to true
+    setIsLoading(true);  
 
     emailjs
       .send(
-        "service_ggsg4ad",    // seu serviço
-        "template_fo7bb79",    // seu template
-        formData,              // dados do formulário
-        "ZUxtwglnB1KNMiuwU"    // chave pública (ID de usuário)
+        "service_ggsg4ad",    
+        "template_fo7bb79",    
+        formData,             
+        "ZUxtwglnB1KNMiuwU" // TROCAR    
       )
       .then(
         (result) => {
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contato" className="bg-secondBackground p-12 border-neoBrutalism shadow-neoBrutalism_500 rounded-sm flex flex-col items-center justify-start gap-y-14">
+    <div id="contato" className="bg-secondBackground w-11/12 lg:w-auto lg:p-12 p-10 border-neoBrutalism shadow-neoBrutalism_500 rounded-sm flex flex-col items-center justify-start gap-y-14">
       {alert && (
         <ContactAlert 
           mensagem={alert.mensagem} 
@@ -64,12 +64,13 @@ const Contact: React.FC = () => {
         />
       )}
       <div className="flex flex-col items-center justify-center gap-y-3">
-        <h1 className="text-titleGray text-5xl font-bold">Entre em Contato</h1>
-        <p className="text-textGray text-lg font-medium w-3/4 text-center">
+        <h1 className="hidden lg:block  lg:text-titleGray  lg:text-5xl  lg:font-bold  lg:text-center">Entre em Contato</h1>
+        <h1 className="lg:hidden text-titleGray text-4xl font-bold text-center">Contato</h1>
+        <p className="text-textGray lg:text-lg text-base font-medium lg:w-3/4 text-center">
           Fique à vontade para entrar em contato comigo através do formulário.
         </p>
       </div>
-      <form className="flex items-center flex-col gap-y-12 w-full max-w-md" onSubmit={sendEmail}>
+      <form className="flex items-center flex-col lg:gap-y-12 gap-y-10 w-full max-w-md" onSubmit={sendEmail}>
         <ContactInput
           type="text"
           name="nome"
@@ -92,8 +93,8 @@ const Contact: React.FC = () => {
         />
         <button 
           type="submit" 
-          className="w-96 border-neoBrutalism shadow-neoBrutalism_200 py-3 font-semibold text-lg rounded-sm transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
-          disabled={isLoading} // Disable button while loading
+          className="w-80 lg:w-96 -mt-4 lg:mt-0 border-neoBrutalism shadow-neoBrutalism_200 py-3 font-semibold text-lg rounded-sm transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+          disabled={isLoading}
         >
           {isLoading ? "Enviando..." : "Enviar"}
         </button>

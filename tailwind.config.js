@@ -36,8 +36,10 @@ export default {
         neoBrutalism_500: "12px 12px 0px #000",
 
         neoBrutalism_right: "16px 16px 0px #000",
+        neoBrutalism_right_mobile: "8px 8px 0px #000",
 
         neoBrutalism_label: "0px 3px 0px #000, 3px 3px 0px #000 ",
+        neoBrutalism_label_mobile: "0px 2px 0px #000, 2px 2px 0px #000 ",
       }
     },
   },

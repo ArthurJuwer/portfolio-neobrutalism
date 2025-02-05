@@ -49,8 +49,7 @@ function App() {
             padding: "2rem 0rem",
           }}
         >
-    <div className=" xl:mx-auto xl:max-w-screen-xl"
-    >
+    <div className="xl:mx-auto xl:max-w-screen-xl flex items-center justify-center lg:block">
       <Contact />
     </div>
       </div>

@@ -8,7 +8,7 @@ const Projects = () => {
     <div id="projetos" className="lg:h-[95vh] lg:py-12 py-8 flex flex-col items-center gap-y-10 lg:gap-y-20 bg-fiveGreen">
         <div className="flex items-center flex-col justify-center text-center gap-y-5">
             <h1 className="text-4xl font-bold text-titleGray">Projetos</h1>
-            <p className="w-4/5 text-textGray font-medium text-lg">Aqui estão meus projetos recentes. Estou sempre trabalhando em algo novo, 
+            <p className="w-4/5 text-textGray font-medium lg:text-lg">Aqui estão meus projetos recentes. Estou sempre trabalhando em algo novo, 
             então volte em breve!</p>
         </div>
         <div className="lg:px-60 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-items-center">
