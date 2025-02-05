@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContactInput from "./ContactInput";
 import ContactTextArea from "./ContactTextArea";
 import emailjs from "@emailjs/browser";
+import ContactAlert from "./ContactAlert";  // Import the FormAlert component
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ const Contact: React.FC = () => {
     email: "",
     mensagem: "",
   });
+
+  const [alert, setAlert] = useState<{ mensagem: string; tipo: string } | null>(null);
+  const [isLoading, setIsLoading] = useState(false);  // New state for loading
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -19,28 +23,46 @@ const Contact: React.FC = () => {
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.nome || !formData.email || !formData.mensagem) {
+      setAlert({ mensagem: "Por favor, preencha todos os campos.", tipo: "erro" });
+      return;
+    }
+
+    setIsLoading(true);  // Set loading state to true
+
     emailjs
       .send(
-        "service_ggsg4ad",
-        "template_fo7bb79", 
-        formData,
-        "ZUxtwglnB1KNMiuwU" 
+        "service_ggsg4ad",    // seu serviço
+        "template_fo7bb79",    // seu template
+        formData,              // dados do formulário
+        "ZUxtwglnB1KNMiuwU"    // chave pública (ID de usuário)
       )
       .then(
         (result) => {
           console.log("Mensagem enviada!", result.text);
-          alert("Mensagem enviada com sucesso!");
+          setAlert({ mensagem: "Mensagem enviada com sucesso!", tipo: "sucesso" });
           setFormData({ nome: "", email: "", mensagem: "" });
         },
         (error) => {
           console.error("Erro ao enviar mensagem:", error.text);
-          alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+          setAlert({ mensagem: "Ocorreu um erro ao enviar a mensagem. Tente novamente.", tipo: "erro" });
         }
-      );
+      )
+      .finally(() => {
+        setIsLoading(false);  // Reset loading state
+      });
   };
 
   return (
     <div id="contato" className="bg-secondBackground p-12 border-neoBrutalism shadow-neoBrutalism_500 rounded-sm flex flex-col items-center justify-start gap-y-14">
+      {alert && (
+        <ContactAlert 
+          mensagem={alert.mensagem} 
+          tipo={alert.tipo} 
+          onClose={() => setAlert(null)} 
+        />
+      )}
       <div className="flex flex-col items-center justify-center gap-y-3">
         <h1 className="text-titleGray text-5xl font-bold">Entre em Contato</h1>
         <p className="text-textGray text-lg font-medium w-3/4 text-center">
@@ -68,8 +90,12 @@ const Contact: React.FC = () => {
           value={formData.mensagem}
           onChange={handleChange}
         />
-        <button type="submit" className="w-96 border-neoBrutalism shadow-neoBrutalism_200 py-3 font-semibold text-lg rounded-sm transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
-          Enviar
+        <button 
+          type="submit" 
+          className="w-96 border-neoBrutalism shadow-neoBrutalism_200 py-3 font-semibold text-lg rounded-sm transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+          disabled={isLoading} // Disable button while loading
+        >
+          {isLoading ? "Enviando..." : "Enviar"}
         </button>
       </form>
     </div>

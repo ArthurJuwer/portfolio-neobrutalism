@@ -118,47 +118,48 @@ const ContentAboutAndHabilities = () => {
                 <h1 className="font-semibold text-2xl">Linha do Tempo</h1>
                 <div className="flex">
                     <span className="hidden lg:flex border-l-4 h-72 border-black"></span>
-                    <div className="flex flex-col justify-between">
-                        <div className="flex items-center">
-                            <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
-                            <div className="flex items-center lg:items-start lg:gap-x-10 gap-x-5">
-                                <div className="flex items-center justify-center h-16 w-48 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md">
-                                    <h1 className="text-3xl font-bold">2022</h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="lg:text-lg font-semibold" >Resilience and Future Horizons</h1>
-                                    <p className="lg:text-sm text-xs">Adapting to new challenges, we remained committed to our mission of providing an </p>
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                        <div className="flex items-center">
-                            <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
-                            <div className="flex items-center lg:items-start lg:gap-x-10 gap-x-5">
-                                <div className="flex items-center justify-center h-16 w-48 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md">
-                                    <h1 className="text-3xl font-bold">2023</h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="lg:text-lg font-semibold" >Resilience and Future Horizons</h1>
-                                    <p className="lg:text-sm text-xs">Adapting to new challenges, we remained committed to our mission of providing an </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex items-center">
-                            <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
-                            <div className="flex items-center lg:items-start lg:gap-x-10 gap-x-5">
-                                <div className="flex items-center justify-center h-16 w-48 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md">
-                                    <h1 className="text-3xl font-bold">2024</h1>
-                                </div>
-                                <div className="">
-                                    <h1 className="lg:text-lg font-semibold" >Resilience and Future Horizons</h1>
-                                    <p className="lg:text-sm text-xs">Adapting to new challenges, we remained committed to our mission of providing an </p>
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <div className="space-y-8">
+                <div className="flex items-center">
+                    <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
+                    <div className="flex items-center justify-between lg:gap-x-10 gap-x-5 w-full">
+                    <div className="flex items-center justify-center h-16 w-32 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md transition-all duration-200 hover:translate-y-1 hover:shadow-none">
+                        <h1 className="text-3xl font-bold">2022</h1>
                     </div>
+                    <div className="flex-1">
+                        <h1 className="lg:text-lg font-semibold">Início da Programação</h1>
+                        <p className="lg:text-sm text-xs">Este ano foi onde eu conheci a programação e comecei o estudo através de cursos.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div className="flex items-center">
+                    <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
+                    <div className="flex items-center justify-between lg:gap-x-10 gap-x-5 w-full">
+                    <div className="flex items-center justify-center h-16 w-32 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md transition-all duration-200 hover:translate-y-1 hover:shadow-none">
+                        <h1 className="text-3xl font-bold">2024</h1>
+                    </div>
+                    <div className="flex-1">
+                        <h1 className="lg:text-lg font-semibold">Ensino Médio Técnico em T.I</h1>
+                        <p className="lg:text-sm text-xs">Comecei o ensino médio no Senac, onde tive a oportunidade de representar a instituição em feiras.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div className="flex items-center">
+                    <span className="hidden lg:block border-l-[4rem] h-1 border-black"></span>
+                    <div className="flex items-center justify-between lg:gap-x-10 gap-x-5 w-full">
+                    <div className="flex items-center justify-center h-16 w-32 bg-white border-neoBrutalism shadow-neoBrutalism rounded-md transition-all duration-200 hover:translate-y-1 hover:shadow-none">
+                        <h1 className="text-3xl font-bold">2025</h1>
+                    </div>
+                    <div className="flex-1">
+                        <h1 className="lg:text-lg font-semibold">Novas Oportunidades e Projetos</h1>
+                        <p className="lg:text-sm text-xs">Neste ano, estou focando no desenvolvimento de projetos de maior impacto e ajudar pessoas.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                        
                 </div>
             </div>
             <div className={`${atualIndexSlide === 2 ? "flex" : "hidden"} w-full flex-col gap-y-4 lg:pb-24`}>
