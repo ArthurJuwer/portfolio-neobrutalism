@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contato" className="bg-secondBackground w-11/12 lg:w-auto lg:p-12 p-10 border-neoBrutalism shadow-neoBrutalism_500 rounded-sm flex flex-col items-center justify-start gap-y-14">
+    <div id="contato" className="bg-secondBackground w-11/12 lg:w-auto lg:p-12 p-10 border-neoBrutalism lg:shadow-neoBrutalism_500 shadow-neoBrutalism_400 rounded-sm flex flex-col items-center justify-start gap-y-14">
       {alert && (
         <ContactAlert 
           mensagem={alert.mensagem} 
