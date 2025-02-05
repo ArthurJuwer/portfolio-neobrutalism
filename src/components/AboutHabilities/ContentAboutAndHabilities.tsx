@@ -37,17 +37,17 @@ const ContentAboutAndHabilities = () => {
           <div className="flex flex-col">
             <div className="flex justify-between items-start">
                 <h1 className="text-2xl font-bold">Selecione o idioma do currículo?</h1>
-                <button className="size-9 text-white flex items-center justify-center bg-red-800 border-neoBrutalism shadow-neoBrutalism transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                <button className="size-9 w-11 lg:w-9 text-white flex items-center justify-center bg-red-800 border-neoBrutalism shadow-neoBrutalism transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
                     <X className="size-7" onClick={() => setOpenModal(false)}/>
                 </button>
             </div>
           </div>
-            <div className="flex justify-between gap-x-4">
+            <div className="flex flex-col lg:flex-row justify-between gap-4">
               <a
                 href={curriculoPortugues}
                 download={curriculoPortugues}
                 onClick={() => setOpenModal(false)}
-                className="w-1/2 p-3 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+                className="lg:w-1/2 w-full p-3 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
               >
                 <img 
                     src={bandeiraBrasil} 
@@ -62,7 +62,7 @@ const ContentAboutAndHabilities = () => {
                 href={curriculumEnglish}
                 download={curriculumEnglish}
                 onClick={() => setOpenModal(false)}
-                className="w-1/2 py-3 px-4 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+                className="lg:w-1/2 w-full py-3 px-4 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
               >
                 <img 
                     src={bandeiraEstadosUnidos} 
