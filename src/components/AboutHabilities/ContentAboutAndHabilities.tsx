@@ -30,7 +30,7 @@ const ContentAboutAndHabilities = () => {
 
     
   return (
-    <div className="flex flex-col gap-y-5 my-12">
+    <div className="flex flex-col items-center  gap-y-5 lg:my-12 my-2">
         {openModal && (
         <div className="fixed inset-0 z-[99999] bg-black/70 flex items-center justify-center">
           <div className="bg-white p-8 rounded-xl shadow-lg w-11/12 max-w-lg flex flex-col gap-y-6">
@@ -74,7 +74,7 @@ const ContentAboutAndHabilities = () => {
           </div>
         </div>
       )}
-        <div className="w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
+        <div className="w-11/12 lg:w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
             <button
                 id="sobre"  
                 className={`${atualIndexSlide === 1 ? "border-black border-2" : ""} w-1/2 text-xl font-semibold  p-3 rounded-xl`}
@@ -90,8 +90,8 @@ const ContentAboutAndHabilities = () => {
                 Habilidades
             </button>
         </div>
-        <div className="w-full h-[28rem] flex flex-col lg:flex-row gap-12 items-start justify-between bg-mainGreen p-6 py-8 border-neoBrutalism shadow-neoBrutalism rounded-xl">
-            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-8 lg:pb-24`}>
+        <div className="w-11/12 lg:w-full lg:h-[28rem] flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between bg-mainGreen p-6 py-8 border-neoBrutalism shadow-neoBrutalism rounded-xl">
+            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-6 lg:gap-y-8 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Sobre Mim</h1>
                 <p className="text-justify">
                     Sou um estudante de Tecnologia da Informação no Senac, apaixonado por desenvolvimento de software e novas tecnologias. Sempre em busca de aprimorar minhas habilidades e aprender mais sobre desenvolvimento front-end, back-end e inovação tecnológica.
@@ -105,7 +105,7 @@ const ContentAboutAndHabilities = () => {
                     Ver Currículo <div className="size-7 border-black border rounded-full bg-mainGreen flex items-center justify-center "> <Upload className="size-4" /> </div>
                 </button>
             </div>
-            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden" } items-center justify-center h-full `}>
+            <div className={`${atualIndexSlide === 1 ? "flex" : "hidden" } items-center justify-center h-full w-full lg:w-auto `}>
                 <span className="border-2 w-full lg:w-0 lg:h-80 border-black rounded-xl"></span>
             </div>
             
@@ -159,8 +159,8 @@ const ContentAboutAndHabilities = () => {
             </div>
             <div className={`${atualIndexSlide === 2 ? "flex" : "hidden"} w-full flex-col gap-y-4 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Habilidades</h1>
-                <div className="w-full h-80 p-6 bg-fourGreen rounded-xl flex justify-between gap-x-10">
-                    <div className="w-1/2 flex flex-col gap-y-4">
+                <div className="w-full lg:h-80 p-6 bg-fourGreen rounded-xl flex justify-between gap-5 lg:gap-x-10 flex-col lg:flex-row">
+                    <div className="lg:w-1/2 flex flex-col gap-y-4">
                         <h1 className="text-2xl font-semibold">Frontend</h1>
                         <div className="flex gap-4 flex-wrap w-full">
                         <HabilitiesLanguagesIcons name="Html 5" iconSvg={<svg className="size-7" width="31" height="36" viewBox="0 0 31 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +192,8 @@ const ContentAboutAndHabilities = () => {
                         </svg>} isFrontEnd={true}/>
 </div>
                     </div>
-                    <div className="border-2 w-full lg:w-0 lg:h-64 border-black rounded-xl"></div>
-                    <div className="w-1/2 flex flex-col gap-y-4">
+                    <div className="border-2 lg:w-0 lg:h-64 border-black rounded-xl"></div>
+                    <div className="lg:w-1/2 flex flex-col gap-y-4">
                         <h1 className="text-2xl font-semibold">Backend</h1>
                         <div className="flex gap-4 flex-wrap w-full">
                             <HabilitiesLanguagesIcons name="Node JS" iconSvg={<svg className="size-7" width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">

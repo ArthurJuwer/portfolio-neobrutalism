@@ -48,7 +48,7 @@ const ProjectsCard: FunctionComponent<PropsProjectsCards> = ({
   languagesIcons,
 }) => {
   return (
-    <div className="flex flex-col gap-y-4 w-full bg-mainGreen rounded-lg p-4 border-black border-2 shadow-neoBrutalism_200">
+    <div className="flex flex-col gap-y-4 w-11/12 lg:w-full bg-mainGreen rounded-lg p-4 border-black border-2 shadow-neoBrutalism_200">
       <img
         src={image}
         alt={title}

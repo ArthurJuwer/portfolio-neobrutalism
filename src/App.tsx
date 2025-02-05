@@ -9,13 +9,14 @@ import SocialMedia from "./components/SocialMedia/SocialMedia";
 
 import backgroundCircle from "./assets/backgroundCircle.png"
 import backgroundSquare from "./assets/backgroundSquare.png"
+import ScrollToUp from "./components/FixedElements/ScrollToUp";
 
 
 function App() {
 
   return (
     
-    <div className="bg-mainBackground min-h-dvh xl:pt-8 xl:px-0 p-4 pb-0">
+    <div className="bg-mainBackground min-h-dvh">
       <div className="xl:ml-auto xl:mr-auto xl:max-w-screen-xl">
         <Header />
         <Main />
@@ -53,7 +54,7 @@ function App() {
       <Contact />
     </div>
       </div>
-      
+      <ScrollToUp />
       <Footer />
     </div>
     
