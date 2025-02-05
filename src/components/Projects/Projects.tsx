@@ -12,7 +12,7 @@ const Projects = () => {
             então volte em breve!</p>
         </div>
         <div className="lg:px-60 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-items-center">
-          <ProjectsCard image={site01} title="Criador de Currículos" text="Site Criador de currículos modernos e profissionais de forma rápida e prática, sem complicação. Experimente!" languagesIcons={[1,2,3,4]} website="https://criadordecurriculos.netlify.app/" repository="https://github.com/ArthurJuwer/CurriculumMaker"/>
+          <ProjectsCard image={site01} title="Criador de Currículos" text="Site criador de currículos modernos e profissionais de forma rápida e prática, sem complicação. Experimente!" languagesIcons={[1,2,3,4]} website="https://criadordecurriculos.netlify.app/" repository="https://github.com/ArthurJuwer/CurriculumMaker"/>
           <ProjectsCard image={site02} title="Site Institucional Moral Asessoria" text="Site Institucional feito para o escritório de contabilidade Moral Asessoria Contábil." languagesIcons={[1,2,3,4]} website="https://moralasessoria.netlify.app/"/>
           <ProjectsCard image={site03} title="Voando na Rota Romântica" text="Jogo Flappy Bird com tema rota romântica para o concurso do bicentenário de São Leopoldo." languagesIcons={[1,2]} website="https://voandonarotaromantica.com/" repository="https://github.com/ArthurJuwer/Flappy-Bird-Projeto"/>
         </div>

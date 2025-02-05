@@ -4,7 +4,7 @@ import SocialMediaCard from "./SocialMediaCard"
 
 const SocialMedia = () => {
   return (
-    <div id="redes"  className="relative bg-mainBackground h-[70vh] lg:h-[58vh]">
+    <div id="redes"  className="relative bg-mainBackground h-[80vh] lg:h-[58vh]">
         <svg className="absolute lg:-top-1 z-0 w-full h-auto" viewBox="0 0 1918 465" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M942.746 464L1 140.614V1H1917V56.1964L942.746 464Z" fill="#EBFFC9" stroke="#EBFFC9"/>
         </svg>
@@ -13,7 +13,7 @@ const SocialMedia = () => {
                 <h1 className="font-bold text-2xl">Me siga nas Redes Sociais </h1>
                 
             </div>
-            <div className="-mt-6 w-full flex justify-center gap-6 flex-wrap lg:justify-between p-10 lg:py-12 lg:px-28 bg-secondGreen text-center rounded-xl border-2 border-r-0 border-t-0 border-black">
+            <div className="-mt-6 w-full flex justify-center gap-4 flex-wrap lg:justify-between py-12 px-3 lg:py-12 lg:px-28 bg-secondGreen text-center rounded-xl border-2 border-r-0 border-t-0 border-black">
                 
                 <SocialMediaCard icon={<Github className="lg:size-20 size-10" />} link="github.com/ArthurJuwer" followers="14 seguidores"/>
                 <SocialMediaCard icon={<Linkedin className="lg:size-20 size-10" />} link="linkedin.com/in/arthurjuwer/" followers="171 conexões"/>
