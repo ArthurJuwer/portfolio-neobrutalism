@@ -49,7 +49,7 @@ function App() {
             padding: "2rem 0rem",
           }}
         >
-    <div className="xl:mx-auto xl:max-w-screen-xl flex items-center justify-center lg:block">
+    <div className="xl:mx-auto xl:max-w-screen-xl flex items-center justify-center 2xl:block">
       <Contact />
     </div>
       </div>

@@ -53,6 +53,7 @@ const ContentAboutAndHabilities = () => {
                     src={bandeiraBrasil} 
                     alt="bandeira brasil neobrutalista"
                     className="rounded-md h-10"
+                    loading="lazy"
                 />
                 Português
               </a>
@@ -74,7 +75,7 @@ const ContentAboutAndHabilities = () => {
           </div>
         </div>
       )}
-        <div className="w-11/12 lg:w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
+        <div className="w-11/12 2xl:w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
             <button
                 id="sobre"  
                 className={`${atualIndexSlide === 1 ? "border-black border-2" : ""} w-1/2 text-xl font-semibold  p-3 rounded-xl`}
@@ -90,7 +91,7 @@ const ContentAboutAndHabilities = () => {
                 Habilidades
             </button>
         </div>
-        <div className="w-11/12 lg:w-full lg:h-[28rem] flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between bg-mainGreen p-5 py-8 border-neoBrutalism shadow-neoBrutalism rounded-xl">
+        <div className="w-11/12 2xl:w-full lg:h-[28rem] flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-between bg-mainGreen p-5 py-8 border-neoBrutalism shadow-neoBrutalism rounded-xl">
             <div className={`${atualIndexSlide === 1 ? "flex" : "hidden"} lg:w-1/2 w-full flex-col gap-y-6 lg:gap-y-8 lg:pb-24`}>
                 <h1 className="font-semibold text-2xl ">Sobre Mim</h1>
                 <p className="text-justify">
