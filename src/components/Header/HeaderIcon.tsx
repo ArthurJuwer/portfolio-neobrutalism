@@ -17,7 +17,7 @@ const HeaderIcon: FunctionComponent<HeaderIconProps> = ({menuSituation, get}) =>
 
     return (
         <button 
-            className="size-12 bg-mainGreen flex items-center justify-center border-neoBrutalism shadow-neoBrutalism rounded-md"
+            className="size-12 bg-mainGreen flex items-center justify-center border-neoBrutalism shadow-neoBrutalism rounded-md transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
             onClick={openMenu}
         >
             

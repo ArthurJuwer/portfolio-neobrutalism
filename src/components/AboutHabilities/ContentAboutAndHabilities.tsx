@@ -1,9 +1,16 @@
-import { Upload } from "lucide-react"
+import { Upload, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import HabilitiesLanguagesIcons from "./HabilitiesLanguagesIcons"
+import bandeiraBrasil from "../../assets/brasil.webp"
+import bandeiraEstadosUnidos from "../../assets/estados-unidos.webp"
+import curriculoPortugues from "../../assets/pdf/Curriculo Português Arthur Juwer.pdf"
+import curriculumEnglish from "../../assets/pdf/English Curriculum Arthur Juwer.pdf"
+// import bandeiraEstadosUnidos from "../../assets/estados-unidos.webp"
 
 const ContentAboutAndHabilities = () => {
     const [atualIndexSlide, setAtualIndexSlide] = useState<number>(1)
+
+    const [openModal, setOpenModal] = useState<boolean>(false);
 
     const hash = window.location.hash// Remove o #
 
@@ -18,22 +25,60 @@ const ContentAboutAndHabilities = () => {
             }
         };
 
-        // Verificar o hash quando o componente for montado
         checkHash();
 
-        // Adicionar listener para verificar mudanças no hash
         window.addEventListener("hashchange", checkHash);
 
-        // Limpar o evento quando o componente for desmontado
         return () => {
             window.removeEventListener("hashchange", checkHash);
         };
     }, [])
     
-
-
   return (
     <div className="flex flex-col gap-y-5 my-12">
+        {openModal && (
+        <div className="fixed inset-0 z-[99999] bg-black/70 flex items-center justify-center">
+          <div className="bg-white p-8 rounded-xl shadow-lg w-11/12 max-w-lg flex flex-col gap-y-6">
+          <div className="flex flex-col">
+            <div className="flex justify-between items-start">
+                <h1 className="text-2xl font-bold">Selecione o idioma do currículo?</h1>
+                <button className="size-9 text-white flex items-center justify-center bg-red-800 border-neoBrutalism shadow-neoBrutalism transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                    <X className="size-7" onClick={() => setOpenModal(false)}/>
+                </button>
+            </div>
+          </div>
+            <div className="flex justify-between gap-x-4">
+              <a
+                href={curriculoPortugues}
+                download={curriculoPortugues}
+                onClick={() => setOpenModal(false)}
+                className="w-1/2 p-3 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+              >
+                <img 
+                    src={bandeiraBrasil} 
+                    alt="bandeira brasil neobrutalista"
+                    className="rounded-md h-10"
+                />
+                Português
+              </a>
+              
+              <a
+                href={curriculumEnglish}
+                download={curriculumEnglish}
+                onClick={() => setOpenModal(false)}
+                className="w-1/2 py-3 px-4 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+              >
+                <img 
+                    src={bandeiraEstadosUnidos} 
+                    alt="bandeira ingles neobrutalista"
+                    className="rounded-md h-10"
+                />
+                Inglês
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
         <div className="w-full flex items-center justify-between bg-mainGreen p-3 border-neoBrutalism rounded-xl">
             <button
                 id="sobre"  
@@ -59,9 +104,10 @@ const ContentAboutAndHabilities = () => {
                     Com projetos focados em aplicações web, sempre tento integrar as melhores práticas de design e desenvolvimento, buscando entregar soluções que combinam funcionalidade e estética.
                 </p>
                 <button 
-                    className="border-neoBrutalism shadow-neoBrutalism bg-white p-2 rounded-lg w-full lg:w-5/12 font-semibold flex items-center justify-center gap-x-2"
+                    onClick={() => setOpenModal(true)}
+                    className="border-neoBrutalism shadow-neoBrutalism bg-white p-2 rounded-lg w-full lg:w-5/12 font-semibold flex items-center justify-center gap-x-2 transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
                 >
-                    Baixar Currículo <div className="size-7 border-black border rounded-full bg-mainGreen flex items-center justify-center"> <Upload className="size-4" /> </div>
+                    Ver Currículo <div className="size-7 border-black border rounded-full bg-mainGreen flex items-center justify-center "> <Upload className="size-4" /> </div>
                 </button>
             </div>
             <div className={`${atualIndexSlide === 1 ? "flex" : "hidden" } items-center justify-center h-full `}>
