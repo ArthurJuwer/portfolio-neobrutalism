@@ -11,9 +11,7 @@ const ContentAboutAndHabilities = () => {
     const [atualIndexSlide, setAtualIndexSlide] = useState<number>(1)
 
     const [openModal, setOpenModal] = useState<boolean>(false);
-
-    const hash = window.location.hash// Remove o #
-
+    
     useEffect(() => {
         // Função que verifica o hash
         const checkHash = () => {
