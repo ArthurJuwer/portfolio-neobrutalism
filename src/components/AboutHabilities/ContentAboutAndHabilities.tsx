@@ -11,26 +11,23 @@ const ContentAboutAndHabilities = () => {
     const [atualIndexSlide, setAtualIndexSlide] = useState<number>(1)
 
     const [openModal, setOpenModal] = useState<boolean>(false);
-    
+
     useEffect(() => {
-        // Função que verifica o hash
+    if (typeof window !== "undefined") {
         const checkHash = () => {
-            const hash = window.location.hash;
-            if (hash === "#habilidades") {
-                setAtualIndexSlide(2);
-            } else {
-                setAtualIndexSlide(1);
-            }
+        const hash = window.location.hash;
+        setAtualIndexSlide(hash === "#habilidades" ? 2 : 1);
         };
 
         checkHash();
-
         window.addEventListener("hashchange", checkHash);
 
         return () => {
-            window.removeEventListener("hashchange", checkHash);
+        window.removeEventListener("hashchange", checkHash);
         };
-    }, [])
+    }
+    }, []);
+
     
   return (
     <div className="flex flex-col gap-y-5 my-12">
