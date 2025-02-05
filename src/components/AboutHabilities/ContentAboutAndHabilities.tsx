@@ -13,20 +13,20 @@ const ContentAboutAndHabilities = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     useEffect(() => {
-    if (typeof window !== "undefined") {
-        const checkHash = () => {
-        const hash = window.location.hash;
-        setAtualIndexSlide(hash === "#habilidades" ? 2 : 1);
-        };
-
-        checkHash();
-        window.addEventListener("hashchange", checkHash);
-
-        return () => {
-        window.removeEventListener("hashchange", checkHash);
-        };
-    }
-    }, []);
+        if (typeof window !== "undefined") {
+          const checkHash = () => {
+            const hash = window.location.hash;
+            setAtualIndexSlide(hash === "#habilidades" ? 2 : 1);
+          };
+      
+          checkHash();
+          window.addEventListener("hashchange", checkHash);
+      
+          return () => {
+            window.removeEventListener("hashchange", checkHash);
+          };
+        }
+      }, []);
 
     
   return (
