@@ -33,10 +33,10 @@ const Contact: React.FC = () => {
 
     emailjs
       .send(
-        "service_ggsg4ad",    
-        "template_fo7bb79",    
+        import.meta.env.VITE_EMAILJS_SERVICE,    
+        import.meta.env.VITE_EMAILJS_TEMPLATE,    
         formData,             
-        "ZUxtwglnB1KNMiuwU" // TROCAR    
+        import.meta.env.VITE_EMAILJS_SECRET // TROCAR    
       )
       .then(
         (result) => {
