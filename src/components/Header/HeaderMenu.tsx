@@ -31,13 +31,13 @@ const HeaderMenu: FunctionComponent<menuSituation> = ({menuSituation}) => {
     }
 
     return (
-    <nav className={`${menuSituation ? "flex" : "hidden"} absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-auto bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
-        <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-12  font-semibold">
+    <nav className={`${menuSituation ? "flex" : "hidden"} absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-9/12 bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
+        <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-10 2xl:gap-x-12  font-semibold">
             {listItemsMenu.map(({name, id, isSelected})=>(
                 <a 
                     href={id}>
                     <li 
-                        className={`${isSelected ? "border-neoBrutalism" : ""} p-1 px-3 rounded-md`}
+                        className={`${isSelected ? "border-neoBrutalism" : ""} p-1 text-[15px] px-2 2xl:px-3 rounded-md`}
                         key={id} 
                         id={id}
                         onClick={() => handleSelect(id)}
