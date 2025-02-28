@@ -15,8 +15,8 @@ const SocialMedia = () => {
             </div>
             <div className="-mt-6 w-full flex justify-center gap-4 flex-wrap lg:justify-between py-12 px-3 lg:py-12 lg:px-28 bg-secondGreen text-center rounded-xl border-2 border-r-0 border-t-0 border-black">
                 
-                <SocialMediaCard icon={<Github className="lg:size-20 size-10" />} link="github.com/ArthurJuwer" followers="14 seguidores"/>
-                <SocialMediaCard icon={<Linkedin className="lg:size-20 size-10" />} link="linkedin.com/in/arthurjuwer/" followers="171 conexões"/>
+                <SocialMediaCard icon={<Github className="lg:size-20 size-10" />} link="github.com/ArthurJuwer" followers="15 seguidores"/>
+                <SocialMediaCard icon={<Linkedin className="lg:size-20 size-10" />} link="linkedin.com/in/arthurjuwer/" followers="224 conexões"/>
                 <SocialMediaCard icon={<Instagram className="lg:size-20 size-10" />} link="instagram.com/arthur_juwer" followers="821 seguidores"/>
 
                 
