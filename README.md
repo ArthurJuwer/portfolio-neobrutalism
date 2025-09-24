@@ -1,54 +1,37 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Portfólio – Arthur Juwer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio pessoal! Aqui você encontrará projetos, habilidades e um pouco mais sobre mim, ele foi desenvolvido em React junto com Typescript no Estilo Neobrutalista.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧑 Sobre mim
 
-## Expanding the ESLint configuration
+Olá! Eu sou **Arthur Juwer** — desenvolvedor apaixonado por tecnologia e inovação.  
+Tenho interesse em **[área de atuação: Front-end / Fullstack / UI/UX / etc.]**, e adoro transformar ideias em interfaces funcionais e criativas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 📍 Localização: São Leopoldo, RS, Brasil  
+- 💼 Áreas de interesse: [Web, Frontend, UI/UX, etc.]  
+- 🛠 Tecnologias favoritas: [listar linguagens, frameworks, bibliotecas, ferramentas]  
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠 Habilidades técnicas utilizadas
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Linguagens:** JavaScript, TypeScript, Tailwindcss.  
+- **Frameworks / bibliotecas:** React, lucide-dev 
+- **Ferramentas:** Github, Vercel/Netlify, Figma.  
+- **Outras competências:** design responsivo, controle de versões, boas práticas de código, testes, acessibilidade.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# Licença
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-=======
-# portfolio-neobrutalism
->>>>>>> 0722e6381af55646dc90a0b0f08e7ddc24d92fd5
+Copyright (c) 2025 Arthur Juwer.  
+Todos os direitos reservados.
+
+Este projeto é protegido por direitos autorais.  
+
+- Você **não** tem permissão para copiar, modificar, distribuir ou utilizar este código e/ou design para fins comerciais ou pessoais sem autorização explícita do autor.  
+- O acesso ao código é apenas para fins de consulta e aprendizado.  
+- Qualquer uso não autorizado é proibido e poderá resultar em medidas legais.  
+
+Para solicitar permissão de uso, entre em contato: [seu email ou LinkedIn].
+

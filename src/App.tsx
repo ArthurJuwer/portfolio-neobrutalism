@@ -7,8 +7,8 @@ import Main from "./components/Main/Main";
 import Projects from "./components/Projects/Projects";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
 
-import backgroundCircle from "./assets/backgroundCircle.png"
-import backgroundSquare from "./assets/backgroundSquare.png"
+import backgroundCircle from "./assets/backgroundCircle.webp"
+import backgroundSquare from "./assets/backgroundSquare.webp"
 import ScrollToUp from "./components/FixedElements/ScrollToUp";
 
 

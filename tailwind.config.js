@@ -42,6 +42,15 @@ export default {
         neoBrutalism_label_mobile: "0px 2px 0px #000, 2px 2px 0px #000 ",
       }
     },
+    keyframes: {
+        flutuar: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' }, // sobe 20px
+        },
+      },
+      animation: {
+        flutuar: 'flutuar 4s ease-in-out infinite',
+      },
   },
   plugins: [],
 }
