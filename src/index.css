@@ -2,7 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+    .bg-grid-dots {
+        background-image: radial-gradient(#00000022 1px, transparent 1px);
+        background-size: 16px 16px;
+    }
+    .bg-diagonal-lines {
+        background-image: repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 8px,
+            #00000010 8px,
+            #00000010 9px
+        );
+    }
+    .text-stroke-black {
+        -webkit-text-stroke: 2px black;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

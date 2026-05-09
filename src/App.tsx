@@ -17,8 +17,8 @@ function App() {
   return (
     
     <div className="bg-mainBackground min-h-dvh">
-      <div className="xl:px-14 2xl:px-0 xl:ml-auto xl:mr-auto xl:max-w-screen-xl">
-        <Header />
+      <Header />
+      <div className="xl:px-14 2xl:px-0 xl:ml-auto xl:mr-auto xl:max-w-screen-xl pt-20 xl:pt-24">
         <Main />
       </div>
       <div className="border-b-2 border-black w-full"></div>

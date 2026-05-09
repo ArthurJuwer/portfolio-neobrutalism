@@ -1,54 +1,59 @@
-import { FunctionComponent, useState } from "react"
+import { FunctionComponent, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface menuSituation {
-    menuSituation: boolean
+  menuSituation: boolean;
+  scrolled?: boolean;
 }
 
-const HeaderMenu: FunctionComponent<menuSituation> = ({menuSituation}) => {
-    
-    interface listaItemsInformations {
-        name: string,
-        id: string,
-        isSelected: boolean,
-    }
-    const [listItemsMenu, setListItemMenu] = useState<listaItemsInformations[]> ([
-        {name: "Inicio", id: "#inicio", isSelected: true },
-        {name: "Sobre", id: "#sobre", isSelected: false },
-        {name: "Habilidades", id: "#habilidades", isSelected: false },
-        {name: "Projetos", id: "#projetos", isSelected: false },
-        {name: "Redes Sociais", id: "#redes", isSelected: false },
-        {name: "Experiências", id: "#experiências", isSelected: false },
-        {name: "Contato", id: "#contato", isSelected: false },
-    ])
+const HeaderMenu: FunctionComponent<menuSituation> = ({ menuSituation, scrolled = false }) => {
+  const { t } = useLanguage();
+  const [selectedId, setSelectedId] = useState<string>("#inicio");
 
-    const handleSelect = (id: string) => {
-        const updatedList = listItemsMenu.map((item)=> ({
-            ...item,
-            isSelected: item.id === id
-        }))
-        setListItemMenu(updatedList)
-        
-    }
-
-    return (
-    <nav className={`${menuSituation ? "flex" : "hidden"} absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-9/12 bg-mainGreen rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center`}>
-        <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-10 2xl:gap-x-12  font-semibold">
-            {listItemsMenu.map(({name, id, isSelected})=>(
-                <a 
-                    href={id}>
-                    <li 
-                        className={`${isSelected ? "border-neoBrutalism" : ""} p-1 text-[15px] px-2 2xl:px-3 rounded-md`}
-                        key={id} 
-                        id={id}
-                        onClick={() => handleSelect(id)}
-                    >
-                        {name}   
-                    </li>
+  return (
+    <AnimatePresence>
+      {menuSituation && (
+        <motion.nav
+          initial={{ opacity: 0, y: -12, scale: 0.96 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            backgroundColor: scrolled ? "#FFE656" : "#A3E636",
+          }}
+          exit={{ opacity: 0, y: -8, scale: 0.96 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="flex absolute right-4 top-20 xl:static xl:h-12 xl:px-6 py-2 w-2/5 xl:w-9/12 rounded-md border-neoBrutalism shadow-neoBrutalism justify-center items-center z-50"
+        >
+          <ul className="flex xl:flex-row flex-col items-center justify-center gap-x-10 2xl:gap-x-12 font-semibold">
+            {t.header.menu.map(({ name, id }) => {
+              const isSelected = selectedId === id;
+              return (
+                <a key={id} href={id}>
+                  <motion.li
+                    whileHover={{ y: -2 }}
+                    whileTap={{ y: 0 }}
+                    onClick={() => setSelectedId(id)}
+                    className="relative p-1 text-[15px] px-2 2xl:px-3 rounded-md cursor-pointer"
+                  >
+                    {name}
+                    {isSelected && (
+                      <motion.span
+                        layoutId="active-menu-indicator"
+                        className="absolute inset-0 border-neoBrutalism rounded-md bg-white/40 -z-10"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </motion.li>
                 </a>
-            ))}
-        </ul>
-    </nav>
-    )
-}
+              );
+            })}
+          </ul>
+        </motion.nav>
+      )}
+    </AnimatePresence>
+  );
+};
 
-export default HeaderMenu
+export default HeaderMenu;
