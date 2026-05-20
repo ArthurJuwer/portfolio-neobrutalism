@@ -4,7 +4,7 @@ import { FunctionComponent } from "react";
 import bandeiraBrasil from "../../assets/brasil.webp";
 import bandeiraEstadosUnidos from "../../assets/estados-unidos.webp";
 import curriculoPortugues from "../../assets/pdf/Curriculo Português Arthur Juwer.pdf.pdf";
-import curriculumEnglish from "../../assets/pdf/English Curriculum Arthur Juwer.pdf";
+import resumeEnglish from "../../assets/pdf/English Resume Arthur Juwer.pdf";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 interface CurriculumModalProps {
@@ -66,8 +66,8 @@ const CurriculumModal: FunctionComponent<CurriculumModalProps> = ({ open, onClos
               <motion.a
                 whileHover={{ y: 2, x: 2, boxShadow: "0px 0px 0px #000" }}
                 whileTap={{ y: 4, x: 4 }}
-                href={curriculumEnglish}
-                download={curriculumEnglish}
+                href={resumeEnglish}
+                download={resumeEnglish}
                 onClick={onClose}
                 className="lg:w-1/2 w-full py-3 px-4 rounded-lg border-neoBrutalism shadow-neoBrutalism_100 flex gap-x-4 items-center text-lg font-medium"
               >
