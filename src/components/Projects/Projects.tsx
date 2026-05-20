@@ -12,7 +12,7 @@ const Projects = () => {
   const cards = [
     {
       image: site01,
-      website: "https://criadordecurriculos.netlify.app/",
+      website: "https://curriculummaker.vercel.app/",
       repository: "https://github.com/ArthurJuwer/CurriculumMaker",
       languagesIcons: [1, 2, 3, 4],
       featured: true,
